@@ -1,0 +1,88 @@
+body {
+    background-color: #4b4c4d;
+  }
+  .slider {
+    position: relative;
+    width: 720px;
+    margin: 100px auto;
+  }
+  .slider input[name="next"] {
+    display: none;
+  }
+  .next {
+    position: relative;
+    left: 40%;
+    top: 600px;
+    text-align: center;
+    width: 100%;
+    z-index: 55;
+  }
+  .next label {
+    display: inline-table;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    margin: 0 3px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: blue;
+  }
+  .slider_box {
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: black;
+  }
+  
+  .slides {
+    width: 400%;
+    height: 560px;
+    transition: all 1.5s;
+  }
+  .skides_txt{
+    width: 400%;
+    height: 25px;
+    transition: all 1.5s;
+  }
+  .slides .slide {
+    width: 720px;
+    height: 560px;
+    float: left;
+  }
+  img{
+      width: 720px;
+      height: 500px;
+  }
+  p{
+      margin-left: 50px;
+      color: white;
+  }
+  
+  #point1:checked~.next label[for="point1"] {
+    background-color: white;
+  }
+  
+  #point2:checked~.next label[for="point2"] {
+    background-color: white;
+  }
+  
+  #point3:checked~.next label[for="point3"] {
+    background-color: white;
+  }
+  #point4:checked~.next label[for="point4"] {
+    background-color: white;
+  }
+  
+  #point1:checked~.slider_box .slides {
+    transform: translate(0);
+  }
+  
+  #point2:checked~.slider_box .slides {
+    transform: translate(-720px);
+  }
+  
+  #point3:checked~.slider_box .slides {
+    transform: translate(-1440px);
+  }
+  #point4:checked~.slider_box .slides {
+    transform: translate(-2160px);
+  }
